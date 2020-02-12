@@ -17,12 +17,16 @@ body {
   padding:2%;
   width: 30%;
   border: solid 1px #000000;
-  background: linear-gradient(to right, #000000, #434343); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to right, #000000, #434343);
 
 }
 
 .daplink{
   text-decoration: none;
-  color:#870000;
+  color:#f8b500;
   font-size: 20px;
+}
+
+.followers{
+  text-decoration-color: none;
 }

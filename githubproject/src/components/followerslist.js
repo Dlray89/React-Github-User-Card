@@ -2,12 +2,11 @@ import React from "react";
 import axios from "axios";
 import Styled from "styled-components";
 
-const StyledMContainer = Styled.div `
+const StyledMContainer = Styled.div`
 margin-bottom: 5%;
-`
+`;
 
-
-const StyledContainer = Styled.div `
+const StyledContainer = Styled.div`
 display: flex;
 justify-content: space-around;
 background: linear-gradient(to left, #870000, #190a05);
@@ -15,6 +14,31 @@ padding:3%;
 border-radius: 20px;
 margin: 0 auto;
 width: 60%;
+`;
+const StyledButton = Styled.button`
+background: linear-gradient(to right, #000000, #434343); 
+color: #870000;
+width: 95%;
+padding: 6%;
+`;
+const StyledLink = Styled.a `
+text-decoration: none;
+color: #f8b500;
+font-size: 15px;
+`
+
+const Styledh1 = Styled.h1 `
+color: #870000;
+font-size: 35px;
+`
+
+const StyledName = Styled.p `
+color: #f8b500;
+font-size:18px;
+border-radius: 10px;
+background: linear-gradient(to right, #000000, #434343);
+padding: 5%;
+width: 100%;
 `
 
 class FollowersList extends React.Component {
@@ -36,28 +60,33 @@ class FollowersList extends React.Component {
   }
   render() {
     return (
-        <StyledMContainer>
-        <h1>GitHub Friends</h1>
-      <StyledContainer>
-     
-        {this.state.followers.map(follower => (
-          <div key={follower.node_id}>
-            {follower.login} <br />
-            <img
-              width="100"
-              src={follower.avatar_url}
-              alt="Pictures of followers"
-            />
-            <br />
-            <button>
-              <a href={follower.html_url} target="_blank">
-                Profile Page
-              </a>
-            </button>{" "}
-            <br />
-          </div>
-        ))}
-      </StyledContainer>
+      <StyledMContainer>
+        <Styledh1 >GitHub Friends</Styledh1>
+        <StyledContainer>
+          {this.state.followers.map(follower => (
+            <div key={follower.node_id}>
+             <StyledName>{follower.login}</StyledName>  <br />
+              <img
+                width="100"
+                src={follower.avatar_url}
+                alt="Pictures of followers"
+              />
+              <br />
+              <StyledButton>
+                < StyledLink 
+                className="followers"
+                  href={follower.html_url}
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  
+                >
+                  Profile
+                </StyledLink>
+              </StyledButton>{" "}
+              <br />
+            </div>
+          ))}
+        </StyledContainer>
       </StyledMContainer>
     );
   }
