@@ -1,0 +1,28 @@
+body {
+  text-align: center;
+}
+
+.dapsCard{
+  border: solid 1px #870000;
+  border-radius: 20px;
+  width: 30%;
+  color: #f8b500;
+  padding:2%;
+  height: 65%;
+  margin: 0 auto;
+  background: linear-gradient(to left, #870000, #190a05);
+
+}
+.dapbtn{
+  padding:2%;
+  width: 30%;
+  border: solid 1px #000000;
+  background: linear-gradient(to right, #000000, #434343); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.daplink{
+  text-decoration: none;
+  color:#870000;
+  font-size: 20px;
+}
